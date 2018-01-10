@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="cuisine-header">
+        <h2 class="cuisine-title">
+            {{cuis.length}} Cuisines In {{SelectedCityName[SelectedCityName.length-1]}}</h2>
+        <h3 class="cuisine-title" id="cuisine-select-prompt">Select three cuisines you like:</h3>
+    </div>
+    <div class="row text-center">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="c in cuis">
+            <button type="button" ng-click="CuisineSelector(c.cuisine_id)" class="btn btn-outline-danger btn-lg" id="selector" data-toggle="button"
+                aria-pressed="true">{{c.cuisine_name}}</button>
+            <br>
+        </div>
+    </div>
+</div>

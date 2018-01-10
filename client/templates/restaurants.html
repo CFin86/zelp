@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="cuisine-header">
+        <h2>Showing Top Rated Restaurants in {{SelectedCityName[SelectedCityName.length-1]}}</h2>
+    </div>
+    <div class="col-lg-12 restCard" ng-repeat="r in rest">
+        <div class="pull-right">
+            <a ng-href="{{r.menu_url}}">
+                <button class="btn btn-danger menuBtn">View Menu</button>
+            </a>
+            <br>
+            <a href="http://maps.google.com/maps?q={{r.location.latitude}},{{r.location.longitude}}">
+                <button class="btn btn-secondary menuBtn">Get Directions</button>
+            </a>
+        </div>
+        <h3 class="restCardh3">{{r.name}}</h3>
+        <p class="addressPara">{{r.location.address}}</p>
+        <ul class="cuisinesList">
+            <li class="cuisinesPara">{{r.cuisines.split(", ")[0]}}</li>
+            <li class="cuisinesPara">{{r.cuisines.split(", ")[1]}}</li>
+            <li class="cuisinesPara">{{r.cuisines.split(", ")[2]}}</li>
+        </ul>
+        <p class="ratingPara">Rating:
+            <span style="background-color:#{{r.user_rating.rating_color}}" class="rating">{{r.user_rating.aggregate_rating}} {{r.user_rating.rating_text}}</span>
+        </p>
+        <p>Average Cost For 2: {{r.average_cost_for_two | currency}}</p>
+    </div>
+</div>

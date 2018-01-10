@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <img id="jmbtrnLogo" src="/images/logo.png" />
+        </div>
+        <div class="col-xs-12 text-center">
+        <form class="form-inline justify-content-center">
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputField" placeholder="Search for your city" ng-model="inputValue" required autofocus>
+                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#citiesModal" ng-click="search(inputValue)">Go</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+<!-- <div ng-hide="HTTPmodal"> -->
+<div class="modal fade" id="citiesModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Select your City</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group" ng-repeat="c in cities">
+                        <li class="list-group-item">{{c.name}}<span class="button-group pull-right">
+                        <a ui-sref="cuisines({city_id: c.id})"><button type="button" data-dismiss="modal" ng-click="citySelector(c.name, c.id)" class="btn btn-danger menuBtn">Select</button></a></span>
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a ui-sref="home">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
