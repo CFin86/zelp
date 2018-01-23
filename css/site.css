@@ -41,7 +41,7 @@ margin-right: 5px;
 
 /* ############# HOME PAGE ########## */
 .jumbotron{
-  background-image: url('zelp/images/hero.jpg');
+  background-image: url('https://cfin86.github.io/zelp/images/logo.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
