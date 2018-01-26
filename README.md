@@ -1,5 +1,13 @@
 # Zelp Single Page Application AngularJS
+### To install:
 
+`$ git clone https://github.com/CFin86/zelp.git`
+
+`$ cd zelp`
+
+`$ npm install `
+### Start & watch
+`$npm start`
 ### Overview
 You will create a single-page application (SPA) with Angular JS. You will build a website called Zelp. This website will help people decide where to go for food by returning a list of top rated restaurants in a selected city serving a user’s preferred choice of cuisine. The [API from Zomato.com](https://developers.zomato.com/) will be utilized as a data source. You will need to create an account for Zomato to receive an access key to access the API. There is a rate limit – only a certain number of requests can be made per day per key.
 
@@ -29,4 +37,4 @@ to the **cuisines** state and pass through the city id as a state parameter
 * If the user navigates to this restaurants url directly instead of going through the homepage, use the city_id state parameter from the URL to make the same API request in Step 1 and set the city id in the application
 
 * Use the city_id and cuisines_id state parameters to make a request to the */search* endpoint of Zomato’s API to get a list of matching restaurants, sorted by rating descending (highest rated first)
-▪ When a user clicks on the “Get Directions” button, send them to Google Maps with the latitude/longitude of the restaurant pre-set.
+* When a user clicks on the “Get Directions” button, send them to Google Maps with the latitude/longitude of the restaurant pre-set.

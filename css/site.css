@@ -162,6 +162,27 @@ margin-right: 5px;
   margin-bottom: 5px;
   cursor: pointer;
 }
+/* ############# FOOTER ########## */
+
+.footer{
+  position: relative;
+  top: 5rem;
+  text-align: center;
+  display: flex;
+
+}
+.footer.container{
+  margin: 0 auto;
+}
+#bottom-logo {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 145px;
+}
+.footer a{
+  color: #9dafae;
+}
 /* ############# MEDIA QUERIES ########## */
 @media (max-width:512px){
   #inputField{

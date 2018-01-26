@@ -13,6 +13,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 					templateUrl: 'templates/home.html',
 					controller: 'homeCtrl'
 				},
+				'footer': {
+					templateUrl: 'templates/footer.html'
+				}
 			}
 		})
 		.state('cuisines', {
@@ -26,6 +29,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 					templateUrl: 'templates/cuisines.html',
 					controller: 'cuisinesCtrl'
 				},
+				'footer': {
+					templateUrl: 'templates/footer.html'
+				}
 			}
 		})
 		.state('restaurants', {
@@ -39,6 +45,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 					templateUrl: 'templates/restaurants.html',
 					controller: 'restaurantsCtrl'
 				},
+				'footer': {
+					templateUrl: 'templates/footer.html'
+				}
 			}
 		})
 	$urlRouterProvider.otherwise('/')
